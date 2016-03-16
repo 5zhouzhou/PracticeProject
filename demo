@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <>
+        <meta charset="utf-8">
+        <link  rel="stylesheet"  type="text/css" href="reset.css"/>
+        <style type="text/css">
+             .oneNav{
+                 width:500px;
+                 margin: auto;
+                 font-family: 'Microsoft Yahei', '微软雅黑', \5FAE\8F6F\96C5\9ED1, '宋体', \5b8b\4f53, arial, 'Hiragino Sans GB', Tahoma, Arial, Helvetica;
+                 font-size: 16px;
+                 color:mediumvioletred;
+                 padding:10px 0;
+                 background-color:#d7d7d7;
+             }
+             li{cursor:pointer;}
+            .oneNavTitle,.twoNav li{
+                width:280px;
+                height:25px;
+                line-height:25px;
+                padding-left:30px;
+                background:url("images/close.gif") no-repeat 10px center;
+
+            }
+            .twoNav li{
+                background:none;
+            }
+            .twoNav{
+                  display:none;
+            }
+            .oneNav li.current .twoNav{
+                  display: block;
+            }
+             .oneNav li.current .oneNavTitle{
+                 background:url("images/open.gif") no-repeat 10px center;
+             }
+        </style>
+        <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+           $(function(){
+               $('.oneNavTitle').click(function(){
+                    if(!$(this).parent('li').hasClass('current')){
+                        $(this).parent('li').addClass('current');
+                        $(this).parent('li').siblings('li').removeClass('current');
+                    }else{
+                        $(this).parent('li').removeClass('current');
+                    }
+               });
+           });
+          </script>
+
+    </head>
+    <body>
+      <ul class="oneNav">
+          <li class="current">
+                  <div class="oneNavTitle">新闻事件</div>
+                  <ul class="twoNav">
+                      <li> <a href="#">全民创业</a></li>
+                      <li> <a href="#">全民创业</a></li>
+                      <li> <a href="#">全民创业</a></li>
+                      <li> <a href="#">全民创业</a></li>
+                      <li> <a href="#">全民创业</a></li>
+                  </ul>
+          </li>
+          <li>
+              <div class="oneNavTitle">微博热点</div>
+              <ul class="twoNav">
+                  <li> <a href="#">不断学习进步</a></li>
+                  <li> <a href="#">不断学习进步</a></li>
+                  <li> <a href="#">不断学习进步</a></li>
+                  <li> <a href="#">不断学习进步</a></li>
+                  <li> <a href="#">不断学习进步</a></li>
+
+              </ul>
+          </li>
+          <li>
+              <div class="oneNavTitle">两会热点</div>
+              <ul class="twoNav">
+                  <li> <a href="#">一步一个脚印往前走</a></li>
+                  <li> <a href="#">一步一个脚印往前走</a></li>
+                  <li> <a href="#">一步一个脚印往前走</a></li>
+                  <li> <a href="#">一步一个脚印往前走</a></li>
+                  <li> <a href="#">一步一个脚印往前走</a></li>
+              </ul>
+          </li>
+          <li>
+              <div class="oneNavTitle">凤凰新闻焦点</div>
+              <ul class="twoNav">
+                  <li> <a href="#">学而不思则罔，思而不学则殆。</a></li>
+                  <li> <a href="#">学而不思则罔，思而不学则殆。</a></li>
+                  <li> <a href="#">学而不思则罔，思而不学则殆。</a></li>
+                  <li> <a href="#">学而不思则罔，思而不学则殆。</a></li>
+                  <li> <a href="#">学而不思则罔，思而不学则殆。</a></li>
+              </ul>
+          </li>
+
+      </ul>
+       
+    </body>
+</html>
